@@ -1,89 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Welcome!</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            text-align: center;
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #333333;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: #666666;
-            margin-bottom: 30px;
-        }
-
-        img {
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: #ffffff;
-            padding: 15px 30px;
-            font-size: 16px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header h1 {
+      margin: 0;
+    }
+    .bio {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .bio h2 {
+      margin-top: 0;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: 20px;
+      border: 5px solid #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .profile-img {
+        margin: 20px auto;
+      }
+    }
+  </style>
 </head>
 <body>
-
-    <div class="container">
-        <img src="your_profile_picture.jpg" alt="Your Name">
-        <h1>Hello, I'm <span id="name">Your Name</span>!</h1>
-        <p>Welcome to my personal website. Feel free to explore and get to know me better.</p>
-
-        <label for="yourName">Your Name:</label>
-        <input type="text" id="yourName" placeholder="Enter your name">
-
-        <label for="yourEmail">Your Email:</label>
-        <input type="email" id="yourEmail" placeholder="Enter your email">
-
-        <button onclick="updateInfo()">Update Information</button>
+  <div class="container">
+    <div class="header">
+      <h1>My Name</h1>
+      <img class="profile-img" src="your-profile-image.jpg" alt="Your Name">
     </div>
-
-    <script>
-        function updateInfo() {
-            var nameInput = document.getElementById('yourName');
-            var nameSpan = document.getElementById('name');
-            var newName = nameInput.value;
-
-            if (newName.trim() !== '') {
-                nameSpan.textContent = newName;
-            }
-        }
-    </script>
-
+    <div class="bio">
+      <h2>About Me</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit purus eget libero consequat, eu eleifend turpis dapibus. Nullam efficitur felis ut justo interdum feugiat. Proin vel pulvinar magna, nec aliquet risus. Sed varius felis nec erat laoreet, sed elementum dolor lobortis.</p>
+    </div>
+  </div>
 </body>
 </html>
